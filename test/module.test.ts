@@ -1,8 +1,8 @@
 import { setupTest, expectModuleToBeCalledWith, getNuxt } from '@nuxt/test-utils'
 import * as Components from 'buefy'
 import { PurgeCSSDependencyAutoloaderPlugin as WebpackPlugin } from '../src/webpack-plugin'
-import webpack from 'webpack'
-import { getWebpackConfig } from 'nuxt'
+/* import webpack from 'webpack'
+import { getWebpackConfig } from 'nuxt' */
 
 describe('Module', () => {
   setupTest({
