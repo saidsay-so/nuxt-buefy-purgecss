@@ -57,13 +57,15 @@ describe('Module', () => {
     expect(context.options.build.plugins).toContainEqual(expect.any(WebpackPlugin))
   })
 
-  it('should tap the plugin to PurgeCSS', async () => {
-    const config = await getWebpackConfig()
-    const webpackTest = new Promise<webpack.Stats>((resolve, reject) => webpack(config, (err, stats) => {
-      if (err) { reject(err) }
-      resolve(stats)
-    }))
+  it.todo('should tap the plugin to PurgeCSS'
+    //, async () => {
+    // const config = await getWebpackConfig()
+    // const webpackTest = new Promise<webpack.Stats>((resolve, reject) => webpack(config, (err, stats) => {
+    // if (err) { reject(err) }
+    // resolve(stats)
+    // }))
     // TODO: Complete test
-    expect(webpackTest).resolves.toBeTruthy()
-  })
+    // expect(webpackTest).resolves.toBeTruthy()
+    // }
+  )
 })
