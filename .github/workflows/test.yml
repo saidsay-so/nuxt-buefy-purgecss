@@ -1,5 +1,7 @@
 on: [push, pull_request]
 
+name: test
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,7 +25,7 @@ jobs:
           node-version: "14"
 
       - run: npm ci
-      - run: npm build
+      - run: npm run build
       - run: npm run lint
       - run: npm test
 
