@@ -15,7 +15,7 @@
     "nuxt-buefy": "^0.4.4"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.12",
+    "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.0.4",
     "nuxt-purgecss": "^1.0.0"
   }

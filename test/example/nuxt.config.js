@@ -26,13 +26,13 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '~/components', ignore: 'src/**/*.js' }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    ['nuxt-purgecss', { enabled: true }],
+    ['nuxt-purgecss', { enabled: true, mode: 'webpack' }],
     BuefyLoader
   ],
 
@@ -42,5 +42,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true
   }
 }
