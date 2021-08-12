@@ -19,9 +19,9 @@ export class PurgeCSSDependencyAutoloaderPlugin {
   }
 
   apply (compiler: webpack.Compiler) {
-    compiler.hooks.compilation.tap(this.pluginName, (compilation: webpack.compilation.Compilation) => {
+    compiler.hooks.compilation.tap(this.pluginName, (compilation) => {
       const plugin: PurgeCSSPlugin | undefined = compilation.compiler.options.plugins?.find(
-        (plugin: webpack.Plugin) => (plugin as any).purgedStats
+        (plugin: webpack.WebpackPluginInstance) => (plugin as any).purgedStats
       ) as PurgeCSSPlugin | undefined
 
       if (!plugin) {
@@ -71,7 +71,7 @@ export class PurgeCSSDependencyAutoloaderPlugin {
 
     for (const chunk of chunks) {
       for (const {
-        _identifier,
+        id,
         buildInfo: { fileDependencies }
       } of chunk.getModules()) {
         if (!fileDependencies) {
@@ -83,7 +83,7 @@ export class PurgeCSSDependencyAutoloaderPlugin {
         )
 
         if (deps.length) {
-          this.logger.debug(_identifier, chunk.name, deps)
+          this.logger.debug(id, chunk.name, deps)
           dependencies.push(...deps)
         }
       }
