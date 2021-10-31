@@ -1,8 +1,11 @@
 {
-  "name": "nuxt-buefy-purgecss-loader",
+  "name": "@musikid/nuxt-buefy-purgecss-loader",
   "version": "0.1.0",
   "description": "",
-  "repository": "musikid/nuxt-buefy-purgecss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/musikid/nuxt-buefy-purgecss.git"
+  },
   "license": "MIT",
   "author": "Musikid",
   "main": "dist/index.js",
