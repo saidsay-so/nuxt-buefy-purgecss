@@ -6,6 +6,12 @@
 A simple wrapper for [nuxt-buefy](https://github.com/buefy/nuxt-buefy),
 which adds support for PurgeCSS.
 
+## Install
+
+```sh
+npm install --save @musikid/nuxt-buefy-purgecss-loader
+```
+
 ## Usage
 
 For now, we have to set PurgeCSS to Webpack mode.
