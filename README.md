@@ -9,6 +9,7 @@ which adds support for PurgeCSS.
 ## Install
 
 ```sh
+npm install --save-dev nuxt-purgecss
 npm install --save @musikid/nuxt-buefy-purgecss-loader
 ```
 
@@ -19,7 +20,7 @@ For now, we have to set PurgeCSS to Webpack mode.
 ```js
 {
   buildModules: [
-    'nuxt-buefy-purgecss',
+    '@musikid/nuxt-buefy-purgecss-loader',
     ['nuxt-purgecss', {
       mode: 'webpack'
     }]
