@@ -23,9 +23,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "buefy": "^0.9.8",
+    "buefy": "^0.9.14",
     "consola": "^2.15.3",
-    "fast-glob": "^3.2.6",
+    "fast-glob": "^3.2.11",
     "pug": "^3.0.2",
     "vue-template-compiler": "^2.6.14"
   },
