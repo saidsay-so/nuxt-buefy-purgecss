@@ -19,13 +19,13 @@ describe('Module', () => {
           materialDesignIcons: true,
           materialDesignIconsHRef: 'https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css'
         },
-        components: [
+        components: expect.arrayContaining([
           'Icon', // These ones are in the example
           'Rate',
           // These are the programmatic components
           'Dialog',
           'Notification'
-        ]
+        ])
       },
       src: expect.stringMatching('templates/plugin.ejs'),
       fileName: 'plugins/buefy-loader.js'
@@ -40,7 +40,7 @@ describe('Module', () => {
     ]
     const context = getNuxt()
     const { whitelistPatternsChildren = [], whitelistPatterns = [] }:
-      {whitelistPatterns: RegExp[], whitelistPatternsChildren: RegExp[]} = context.options.purgeCSS
+      { whitelistPatterns: RegExp[], whitelistPatternsChildren: RegExp[] } = context.options.purgeCSS
 
     expect(whitelistPatterns).toEqual(expect.arrayContaining(expected))
     expect(whitelistPatternsChildren).toEqual(expect.arrayContaining(expected))
@@ -83,11 +83,11 @@ describe('Webpack plugin', () => {
     })
 
     it.todo('should tap plugin to PurgeCSS'
-    // async () => {
-    //   const ctx = createContext({
-    //     testDir: __dirname,
-    //     fixture: 'example'
-    //   })
+      // async () => {
+      //   const ctx = createContext({
+      //     testDir: __dirname,
+      //     fixture: 'example'
+      //   })
 
       //   setContext(ctx)
       //   expect(getContext()).toEqual(ctx)
@@ -96,10 +96,10 @@ describe('Webpack plugin', () => {
       //   await loadNuxt()
       //   await ctx.nuxt.ready()
 
-    //   console.log(ctx.nuxt.options.buildDir)
-    //   ctx.nuxt.hook('builder:extendPlugins', (plugins) => console.log(plugins))
-    //   await build()
-    // }
+      //   console.log(ctx.nuxt.options.buildDir)
+      //   ctx.nuxt.hook('builder:extendPlugins', (plugins) => console.log(plugins))
+      //   await build()
+      // }
     )
   }
   )

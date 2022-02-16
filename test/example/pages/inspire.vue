@@ -7,4 +7,5 @@ section.section
     b-rate
     | Author:
     a(href="https://github.com/anteriovieira") Antério Vieira
+  b-notification
 </template>

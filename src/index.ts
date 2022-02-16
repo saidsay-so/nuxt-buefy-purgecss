@@ -22,7 +22,8 @@ const BuefyLoader: Module<Partial<ModuleOptions>> = async function (moduleOption
   const { resolvePath } = this.nuxt.resolver
 
   const programmaticComponents = await findProgrammaticComponents(this.options, resolvePath)
-  const components = (await findComponents(this.options, resolvePath)).concat(programmaticComponents)
+  const tagsComponents = await findComponents(this.options, resolvePath)
+  const components = Array.from(new Set(tagsComponents.concat(programmaticComponents)))
 
   const { enabled, ...buefyOptions } = moduleOptions
   const options = {
